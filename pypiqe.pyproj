@@ -4,7 +4,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>2542e389-0d63-48e6-84bf-3fed564e37ae</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>pypiqe\piqe.py</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
