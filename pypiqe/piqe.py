@@ -120,6 +120,10 @@ def piqe(I):
     distBlockScores = 0  # Accumulation of distorted block scores
     NHSA = 0  # Number of high spatial active blocks.
 
+    # RGB to Gray Conversion
+    if ipImage.ndim == 3:
+        ipImage = cv2.cvtColor(ipImage, cv2.COLOR_BGR2GRAY)
+
     # Pad if size(ipImage) is not divisible by blockSize.
     originalSize = ipImage.shape  # Actual image size
     rows, columns = originalSize[:2]
@@ -133,10 +137,6 @@ def piqe(I):
             columnsPad = blockSize - columnsPad
         isPadded = True
         ipImage = np.pad(ipImage, ((0, rowsPad), (0, columnsPad)), mode='symmetric')
-
-    # RGB to Gray Conversion
-    if ipImage.ndim == 3:
-        ipImage = cv2.cvtColor(ipImage, cv2.COLOR_BGR2GRAY)
 
     # Convert input image to double and scaled to the range 0-255
     ipImage = np.round(255 * (ipImage / np.max(ipImage)))
