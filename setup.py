@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="pypiqe",
-    version="1.1",
+    version="1.2",
     packages=find_packages(),
     author="Michael W. Rutherford",
     author_email="sykiemikey@hotmail.com",
@@ -25,4 +25,4 @@ setup(
 
 # pip install setuptools wheel twine
 # python setup.py sdist bdist_wheel
-# twine upload dist/*
+# twine upload dist/pypiqe-1.2-py3-none-any.whl
